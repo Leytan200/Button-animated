@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bouton Animé avec Action</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #111;
+    }
+
+    .bouton {
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: linear-gradient(-45deg, #00ff7f, #00bfff, #1e90ff, #00ff7f);
+      background-size: 400% 400%;
+      animation: degradeAnime 6s ease infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .bouton:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes degradeAnime {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="bouton" onclick="actionClique()">Animated Button</button>
+
+  <script>
+    function actionClique() {
+      alert("You clicked the animated button!");
+    }
+  </script>
+
+</body>
+</html>
